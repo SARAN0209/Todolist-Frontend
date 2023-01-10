@@ -68,10 +68,10 @@ function App() {
 
   return (
     <div className="App">
-     <h1>Todo List</h1>
+     <h1>TODO LIST</h1>
       <form className="form" onSubmit={e => addItem(e)}>
         <input type="text" placeholder='Add Todo Item' onChange={e => {setItemText(e.target.value)} } value={itemText} />
-        <button type="submit">Add</button>
+        <button type="submit">ADD</button>
       </form>
       <div className="todo-listItems">
         {
@@ -82,8 +82,8 @@ function App() {
               ? renderUpdateForm()
               : <>
                   <p className="item-content">{item.item}</p>
-                  <button className="update-item" onClick={()=>{setIsUpdating(item._id)}}>Update</button>
-                  <button className="delete-item" onClick={()=>{deleteItem(item._id)}}>Delete</button>
+                  <button className="update-item" onClick={()=>{setIsUpdating(item._id)}}>UPDATE</button>
+                  <button className="delete-item" onClick={()=>{deleteItem(item._id)}}>DELETE</button>
                 </>
             }
           </div>
